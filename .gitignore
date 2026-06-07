@@ -1,0 +1,34 @@
+# Claude Code config
+.claude/
+
+# Next.js alternate version (not part of this project)
+hrms-next/
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+**/dist/
+.next/
+
+# Environment files
+.env
+.env.*
+!**/.env.example
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.sw?
