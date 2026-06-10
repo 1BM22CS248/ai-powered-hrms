@@ -14,9 +14,11 @@ export function clearToken() {
   localStorage.removeItem(TOKEN_KEY)
 }
 
+const API_BASE = import.meta.env.VITE_API_URL ?? ''
+
 async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
   const token = getToken()
-  const res = await fetch(`/api${path}`, {
+  const res = await fetch(`${API_BASE}/api${path}`, {
     ...options,
     credentials: 'include', // send httpOnly cookie on every request (H-6 fix)
     headers: {
