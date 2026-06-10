@@ -992,7 +992,7 @@ function buildJobPostings(departments: Department[]): JobPosting[] {
       location: faker.location.city(),
       type: pick(['full-time', 'part-time', 'contract']),
       experience: `${randomInt(1, 8)} years`,
-      description: pick((JOB_DESCRIPTION_TEMPLATES[title] ?? JOB_DESCRIPTION_TEMPLATES.default)),
+      description: pick((JOB_DESCRIPTION_TEMPLATES[pick(titles)] ?? JOB_DESCRIPTION_TEMPLATES.default)),
       status: pick(['open', 'closed', 'on-hold']),
       openings: randomInt(1, 5),
       createdAt: isoDate(faker.date.past({ years: 1 })),
